@@ -19,14 +19,13 @@ io.on('connection', (socket) => {
 
     socket.on('createMessage', (newMessage) => {
         console.log(`Message From ${newMessage.from}`, newMessage);
+        io.emit('newMessage', {
+            from: newMessage.from,
+            message: newMessage.message,
+            createdAt: new Date().getTime()
+        })
     });
 
-
-    socket.emit('newMessage', {
-        from: 'John',
-        message: 'what\'s up?',
-        createdAt: 123
-    });
 });
 
 const port = process.env.PORT || 3000;
