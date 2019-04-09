@@ -1,7 +1,7 @@
 {
   "name": "2.creating-a-chat-app",
   "version": "1.0.0",
-  "description": "Chatting Application with socket.io\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[S\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "description": "Chatting Application with socket",
   "main": "server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -16,6 +16,7 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "moment": "^2.24.0",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
