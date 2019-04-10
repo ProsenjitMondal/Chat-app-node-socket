@@ -25,7 +25,14 @@ socket.on('connect', function(message) {
             alert(err);
             window.location.href = '/';
         } else {
-            console.log('No Error');
+            socket.on('updateUserList', function(users) {
+                var ol = jQuery('<ol></ol>');
+                users.forEach(function(user) {
+                    ol.append(jQuery('<li></li>').text(user));
+                });
+
+                jQuery('#users').html(ol);
+            });
         }
     });
 });
